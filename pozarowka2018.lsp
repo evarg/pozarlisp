@@ -2,11 +2,11 @@
 ;
 ; 2018-11-23 - rozpoczecie pisania
 ; 2018-11-23 - ssp::WczytajSystemy()
+; 2021-02-18 - dodanie esser FCT, TD
 ;
 
-
 ; sciezki dostepu
-(setq PATH_SKRYPT "d:\\repozytorium\\AutoLisp\\pozarowka2018\\")
+(setq PATH_SKRYPT "d:\\pozarlisp\\")
 (setq PATH_BLOKI (strcat PATH_SKRYPT "Bloki\\"))
 (setq PATH_SYSTEMY (strcat PATH_SKRYPT "Systemy\\"))
 
