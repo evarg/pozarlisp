@@ -18,7 +18,6 @@
 		"ESSER_TD"
 		"ESSER_Wireless" 
 		"ESSER_WZ" 
-		"ESSER_FCT"
 	))
 
 (defun ESSER:BlokiLista ()
