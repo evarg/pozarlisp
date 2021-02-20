@@ -1,0 +1,12 @@
+BlokAtrybutWartoscSet(entityBlokName nazwaAtrybutu wartosc)
+BlokAtrybutWartoscGet(entityBlokName nazwaAtrybutu)
+
+BlokAtrybutParametrSet(entityBlokName nazwaAtrybutu numerParametru wartosc)
+BlokAtrybutParametrGet(entityBlokName nazwaAtrybutu numerParametru)
+
+
+BlokPozycjaGet(entityBlokName)
+BlokPozycjaSet
+
+blokAtrybutPozycjaGet
+blokAtrybutPozycjaSet
