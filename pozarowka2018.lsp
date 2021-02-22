@@ -3,7 +3,7 @@
 ; 2018-11-23 - rozpoczecie pisania
 ; 2018-11-23 - ssp::WczytajSystemy()
 ; 2021-02-18 - dodanie esser FCT, TD
-;
+; 2021-02-22 - dodanie funkcji ssp:DCL_PozycjonowanieAtrybutu()
 
 ; sciezki dostepu
 (setq PATH_SKRYPT "d:\\pozarlisp\\")

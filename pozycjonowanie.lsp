@@ -8,28 +8,10 @@
 (defconstant J_MIDDLE 2)
 (defconstant J_DOWN 1)
 
-(defconstant odstepXR -220)
-(defconstant odstepXL 220)
-(defconstant odstepYU 220)
-(defconstant odstepYD -220)
-
-
-(defun ssp:AtrybutWszystko ( blok / end enx )
-;	(setq blk (cdr (assoc -1 (entget (car blok)))))
-
-	(setq blk blok)
-	
-	(while
-        (and
-            (null end)
-            (= "ATTRIB" (cdr (assoc 0 (setq enx (entget (setq blk (entnext blk)))))))
-        )
-		
-		(print enx)
-    )
-	wynik
-)
-
+(setq odstepXL 220)
+(setq odstepYU 220)
+(setq odstepXR -220)
+(setq odstepYD -220)
 
 (defun ssp:DCL_PozycjonowanieAtrybutu()	
 	(setq dcl_id (load_dialog (strcat PATH_SKRYPT "wPozycjonowanieAtrybutu.dcl")))
@@ -127,7 +109,6 @@
 				(AtrybutPozycjaSet (car blok) \"centrala\" (* skalaBloku odstepXL) (* skalaBloku odstepYD))
 			"
 		) 
-
 		
 		(start_dialog)
 	)
