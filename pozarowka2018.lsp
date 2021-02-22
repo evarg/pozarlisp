@@ -470,7 +470,7 @@
 	(setq pozycjaBlokuX (nth 0 pozycjaBloku))
 	(setq pozycjaBlokuY (nth 1 pozycjaBloku))
 
-	(BlokAtrybutParametrSet blokNazwa "centrala" 11 (list (+ pozycjaBlokuX roznicaX) (+ pozycjaBlokuY roznicaY))) 
+	(BlokAtrybutParametrSet blokNazwa nazwaAtrybutu 11 (list (+ pozycjaBlokuX roznicaX) (+ pozycjaBlokuY roznicaY))) 
 	
 );defun
 
