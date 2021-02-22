@@ -1,6 +1,26 @@
 wPozycjonowanieAtrybutu : dialog { 
 	label = "Pozycjonowanie atrubutu";
  
+	: row {
+		label = "Nazwa parametru";
+
+		:edit_box {
+			key = "nazwaParametru";
+			label = "Nazwa parametru";
+			value = "";
+			mnemonic = "D";
+			edit_limit = 10;
+			edit_width = 10;
+		}
+		: button {
+			label = "Zmien"; 
+			key = "zmienNazwe";	
+			alignment = centered; 
+			width = 12;
+			is_default = true;
+		}
+	}
+ 
 	: column {
  		: row {
  			: button {

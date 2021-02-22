@@ -13,6 +13,8 @@
 (setq odstepXR -220)
 (setq odstepYD -220)
 
+(setq nazwaParametru "centrala")
+
 (defun ssp:DCL_PozycjonowanieAtrybutu()	
 	(setq dcl_id (load_dialog (strcat PATH_SKRYPT "wPozycjonowanieAtrybutu.dcl")))
 
@@ -23,6 +25,8 @@
 		(setq skalaBloku (BlokSkalaGet (car blok)))
 
 		(new_dialog "wPozycjonowanieAtrybutu" dcl_id)
+
+		(set_tile "nazwaParametru" nazwaParametru)
 
 		(action_tile "wn" 
 			"
@@ -40,76 +44,82 @@
 
 		(action_tile "ul" 
 			"
-				(BlokAtrybutParametrJustifyHorizontalSet (car blok) \"centrala\" J_RIGHT)
-				(BlokAtrybutParametrJustifyVerticalSet (car blok) \"centrala\" J_DOWN)
-				(AtrybutPozycjaSet (car blok) \"centrala\" (* skalaBloku odstepXR) (* skalaBloku odstepYU))
+				(BlokAtrybutParametrJustifyHorizontalSet (car blok) nazwaParametru J_RIGHT)
+				(BlokAtrybutParametrJustifyVerticalSet (car blok) nazwaParametru J_DOWN)
+				(AtrybutPozycjaSet (car blok) nazwaParametru (* skalaBloku odstepXR) (* skalaBloku odstepYU))
  			"
 		) 
 
 		(action_tile "uc" 
 			"
-				(BlokAtrybutParametrJustifyHorizontalSet (car blok) \"centrala\" J_CENTER)
-				(BlokAtrybutParametrJustifyVerticalSet (car blok) \"centrala\" J_DOWN)
-				(AtrybutPozycjaSet (car blok) \"centrala\" 0 (* skalaBloku odstepYU))
+				(BlokAtrybutParametrJustifyHorizontalSet (car blok) nazwaParametru J_CENTER)
+				(BlokAtrybutParametrJustifyVerticalSet (car blok) nazwaParametru J_DOWN)
+				(AtrybutPozycjaSet (car blok) nazwaParametru 0 (* skalaBloku odstepYU))
 			"
 		) 
 
 		(action_tile "ur" 
 			"
-				(BlokAtrybutParametrJustifyHorizontalSet (car blok) \"centrala\" J_LEFT)
-				(BlokAtrybutParametrJustifyVerticalSet (car blok) \"centrala\" J_DOWN)
-				(AtrybutPozycjaSet (car blok) \"centrala\" (* skalaBloku odstepXL) (* skalaBloku odstepYU))
+				(BlokAtrybutParametrJustifyHorizontalSet (car blok) nazwaParametru J_LEFT)
+				(BlokAtrybutParametrJustifyVerticalSet (car blok) nazwaParametru J_DOWN)
+				(AtrybutPozycjaSet (car blok) nazwaParametru (* skalaBloku odstepXL) (* skalaBloku odstepYU))
 		"
 		) 
 
 		(action_tile "ml" 
 			"
-				(BlokAtrybutParametrJustifyHorizontalSet (car blok) \"centrala\" J_RIGHT)
-				(BlokAtrybutParametrJustifyVerticalSet (car blok) \"centrala\" J_MIDDLE)
-				(AtrybutPozycjaSet (car blok) \"centrala\" (* skalaBloku odstepXR) 0)
+				(BlokAtrybutParametrJustifyHorizontalSet (car blok) nazwaParametru J_RIGHT)
+				(BlokAtrybutParametrJustifyVerticalSet (car blok) nazwaParametru J_MIDDLE)
+				(AtrybutPozycjaSet (car blok) nazwaParametru (* skalaBloku odstepXR) 0)
 							"
 		) 
 
 		(action_tile "mc" 
 			"
-				(BlokAtrybutParametrJustifyHorizontalSet (car blok) \"centrala\" J_CENTER)
-				(BlokAtrybutParametrJustifyVerticalSet (car blok) \"centrala\" J_MIDDLE)
-				(AtrybutPozycjaSet (car blok) \"centrala\" 0 0)
+				(BlokAtrybutParametrJustifyHorizontalSet (car blok) nazwaParametru J_CENTER)
+				(BlokAtrybutParametrJustifyVerticalSet (car blok) nazwaParametru J_MIDDLE)
+				(AtrybutPozycjaSet (car blok) nazwaParametru 0 0)
 			"
 		) 
 
 		(action_tile "mr" 
 			"
-				(BlokAtrybutParametrJustifyHorizontalSet (car blok) \"centrala\" J_LEFT)
-				(BlokAtrybutParametrJustifyVerticalSet (car blok) \"centrala\" J_MIDDLE)
-				(AtrybutPozycjaSet (car blok) \"centrala\" (* skalaBloku odstepXL) 0)
+				(BlokAtrybutParametrJustifyHorizontalSet (car blok) nazwaParametru J_LEFT)
+				(BlokAtrybutParametrJustifyVerticalSet (car blok) nazwaParametru J_MIDDLE)
+				(AtrybutPozycjaSet (car blok) nazwaParametru (* skalaBloku odstepXL) 0)
 			"
 		) 
 
 		(action_tile "dl" 
 			"
-				(BlokAtrybutParametrJustifyHorizontalSet (car blok) \"centrala\" J_RIGHT)
-				(BlokAtrybutParametrJustifyVerticalSet (car blok) \"centrala\" J_UP)
-				(AtrybutPozycjaSet (car blok) \"centrala\" (* skalaBloku odstepXR) (* skalaBloku odstepYD))
+				(BlokAtrybutParametrJustifyHorizontalSet (car blok) nazwaParametru J_RIGHT)
+				(BlokAtrybutParametrJustifyVerticalSet (car blok) nazwaParametru J_UP)
+				(AtrybutPozycjaSet (car blok) nazwaParametru (* skalaBloku odstepXR) (* skalaBloku odstepYD))
 			"
 		) 
 
 		(action_tile "dc" 
 			"
-				(BlokAtrybutParametrJustifyHorizontalSet (car blok) \"centrala\" J_CENTER)
-				(BlokAtrybutParametrJustifyVerticalSet (car blok) \"centrala\" J_UP)
-				(AtrybutPozycjaSet (car blok) \"centrala\" 0 (* skalaBloku odstepYD))
+				(BlokAtrybutParametrJustifyHorizontalSet (car blok) nazwaParametru J_CENTER)
+				(BlokAtrybutParametrJustifyVerticalSet (car blok) nazwaParametru J_UP)
+				(AtrybutPozycjaSet (car blok) nazwaParametru 0 (* skalaBloku odstepYD))
 			"
 		) 
 
 		(action_tile "dr" 
 			"
-				(BlokAtrybutParametrJustifyHorizontalSet (car blok) \"centrala\" J_LEFT)
-				(BlokAtrybutParametrJustifyVerticalSet (car blok) \"centrala\" J_UP)
-				(AtrybutPozycjaSet (car blok) \"centrala\" (* skalaBloku odstepXL) (* skalaBloku odstepYD))
+				(BlokAtrybutParametrJustifyHorizontalSet (car blok) nazwaParametru J_LEFT)
+				(BlokAtrybutParametrJustifyVerticalSet (car blok) nazwaParametru J_UP)
+				(AtrybutPozycjaSet (car blok) nazwaParametru (* skalaBloku odstepXL) (* skalaBloku odstepYD))
 			"
 		) 
 		
+		(action_tile "zmienNazwe" 
+			"
+				(setq nazwaParametru (get_tile \"nazwaParametru\"))
+			"
+		) 
+
 		(start_dialog)
 	)
 	(unload_dialog dcl_id)
