@@ -26,10 +26,11 @@
 		"ESSER"
 		"AWEX"
 		))
-
+ 
 ; wczytanie dodatkowych funkcji
 (load (strcat PATH_SKRYPT "helper.lsp"))
 (load (strcat PATH_SKRYPT "pozycjonowanie.lsp"))
+(load (strcat PATH_SKRYPT "numerowanie.lsp"))
 
 	
 ; wczytanie pliku z systemem i nadpisaniem wszystkich zmiennych	

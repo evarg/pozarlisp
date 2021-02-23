@@ -1,4 +1,4 @@
-(print "Wczytany pozycjonowanie.lsp")
+(print "Wczytywanie pozycjonowanie.lsp")
 
 ; stale dt justowania
 (defconstant J_LEFT 0)
