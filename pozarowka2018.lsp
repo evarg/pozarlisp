@@ -31,6 +31,7 @@
 (load (strcat PATH_SKRYPT "helper.lsp"))
 (load (strcat PATH_SKRYPT "pozycjonowanie.lsp"))
 (load (strcat PATH_SKRYPT "numerowanie.lsp"))
+(load (strcat PATH_SKRYPT "pozycjonowanieBloku.lsp"))
 
 	
 ; wczytanie pliku z systemem i nadpisaniem wszystkich zmiennych	
@@ -602,6 +603,39 @@
 (defun BlokAtrybutParametrJustifyVerticalSet(entityName nazwaAtrybutu wartosc)
 	(BlokAtrybutParametrSet entityName nazwaAtrybutu 74 wartosc)
 );defun
+
+
+(defun Polaczenie ()
+	(setq p1 (getpoint "pierwsza czujka"))
+	(setq p4 (getpoint "druga czujka"))
+	
+	(setq 
+		x1 (car p1)
+		y1 (cadr p1)
+		x4 (car p4)
+		y4 (cadr p4)
+	)
+
+	(setq x2 (+ x1 (/ (- x4 x1) 2)))
+	(setq y2 y1)
+	(setq x3 x2)
+	(setq y3 (cadr p4))
+	
+	(setq p2 (list p1 (list x2 y2)))
+	(setq p3 (list (list x3 y3) p4))
+		
+	(command "_pline" p1 p2 p3 p4)
+)
+
+
+(defun testMove()
+	(if (and (setq ss (ssget)) (setq pt (getpoint "\nSelect base point: ")))
+		(command "._move" ss "" pt (list 0 0) (cdr pt))
+		(cond (ss (prompt "\n** Invalid point ** "))
+			((prompt "** Nothing selected ** ")))
+	)
+	(princ)
+)
 
 
 (ssp:WczytajSystemy)
