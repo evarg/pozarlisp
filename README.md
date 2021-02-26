@@ -6,11 +6,10 @@
 	
 ## 2021-02-26
   *Funkcja:*
-  	`(wyrownanieBlokuPion)`
+###  	`(wyrownanieBlokuPion)`
 	    Nalezy wybrać blok, względem którego nastąpi pozycjonowanie, następnie należy wybrać po kolei bloki,
 		które mają zostać wyrównane względem bloku nadrzędnego
-	
-	`(wyrownanieBlokuPoziom)`
+###	`(wyrownanieBlokuPoziom)`
 	    Nalezy wybrać blok, względem którego nastąpi pozycjonowanie, następnie należy wybrać po kolei bloki,
 		które mają zostać wyrównane względem bloku nadrzędnego
 		
