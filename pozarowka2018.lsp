@@ -627,15 +627,4 @@
 	(command "_pline" p1 p2 p3 p4)
 )
 
-
-(defun testMove()
-	(if (and (setq ss (ssget)) (setq pt (getpoint "\nSelect base point: ")))
-		(command "._move" ss "" pt (list 0 0) (cdr pt))
-		(cond (ss (prompt "\n** Invalid point ** "))
-			((prompt "** Nothing selected ** ")))
-	)
-	(princ)
-)
-
-
 (ssp:WczytajSystemy)
