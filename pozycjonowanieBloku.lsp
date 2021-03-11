@@ -1,6 +1,6 @@
 (print "Wczytywanie pozycjonowanieBloku.lsp")
 
-(defun wyrownanieBlokuPion(/ blokPodstawowy, blokDoPodmiany, bazaX, bazaY, blokX, blokY)
+(defun blok:wyrownajPion(/ blokPodstawowy, blokDoPodmiany, bazaX, bazaY, blokX, blokY)
 	(setq blokPodstawowy (car (entsel "Wybierz blok wzgledem ktorego ma byc pozycjonowanie")))
 	(setq bazaX (car (BlokPozycjaGet blokPodstawowy)))
 	(setq bazaY (cadr (BlokPozycjaGet blokPodstawowy)))
@@ -14,7 +14,7 @@
 	)
 )
 
-(defun wyrownanieBlokuPoziom(/ blokPodstawowy, blokDoPodmiany, bazaX, bazaY, blokX, blokY)
+(defun blok:wyrownajPoziom(/ blokPodstawowy, blokDoPodmiany, bazaX, bazaY, blokX, blokY)
 	(setq blokPodstawowy (car (entsel "Wybierz blok wzgledem ktorego ma byc pozycjonowanie")))
 	(setq bazaX (car (BlokPozycjaGet blokPodstawowy)))
 	(setq bazaY (cadr (BlokPozycjaGet blokPodstawowy)))

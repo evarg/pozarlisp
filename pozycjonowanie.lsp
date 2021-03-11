@@ -8,6 +8,7 @@
 (defconstant J_MIDDLE 2)
 (defconstant J_DOWN 1)
 
+; załozenie dla bloku 400x400 z punktem wstawienia w srodku
 (setq odstepXL 220)
 (setq odstepYU 220)
 (setq odstepXR -220)
