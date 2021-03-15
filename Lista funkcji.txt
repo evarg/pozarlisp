@@ -1,0 +1,33 @@
+(defun c:PozarLisp ()
+(defun pl:About ()
+
+Atrybuty.lsp
+(defun pl:AtrybutPozycjonowanieM (miejsce)
+(defun pl:AtrybutPozycjonowanie ()
+
+(defun pl:AtrybutJustifyHorizontalSet (entityName nazwaAtrybutu wartosc)
+(defun pl:AtrybutJustifyVerticalSet (entityName nazwaAtrybutu wartosc)
+
+(defun pl:AtrybutParametrSet (entityName nazwaAtrybutu numerParametru wartosc / enx)
+
+(defun pl:AtrybutPozycjaSet (entityName nazwaAtrybutu roznicaX roznicaY)
+
+(defun pl:AtrybutWartoscGet (entityName nazwaAtrybutu)
+(defun pl:AtrybutWartoscSet (entityName nazwaAtrybutu wartosc / enx)
+
+
+Bloki.lsp
+(defun pl:BlokDXFGet (entityName)
+(defun pl:BlokPozycjaGet (entityName)
+(defun pl:BlokSkalaGet (entityName)
+(defun pl:BlokPodmien (nazwaBlokuS nazwaBlokuD skala nazwaAtrybutuS nazwaAtrybutuD)
+(defun pl:CzyElement (nazwaBloku)
+(defun pl:BlokLista ()
+
+
+Warstwy.lsp
+
+
+(defun warstwa:Utworz (nazwa numerKoloru)
+
+(defun warstwa:ZmienKolor (nazwa numerKoloru)

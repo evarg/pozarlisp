@@ -5,5 +5,5 @@
 )
 
 (defun warstwa:ZmienKolor (nazwa numerKoloru) 
-    (command "._layer" "_C" numerKoloru nazwa "")
+  (command "._layer" "_C" numerKoloru nazwa "")
 )

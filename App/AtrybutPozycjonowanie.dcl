@@ -1,26 +1,6 @@
 dclAtrybutPozycjonowanie : dialog { 
 	label = "Pozycjonowanie atrubutu";
  
-	: row {
-		label = "Nazwa parametru";
-
-		:edit_box {
-			key = "AtrybutDoPozycjonowaniaNazwa";
-			label = "Nazwa parametru";
-			value = "";
-			mnemonic = "D";
-			edit_limit = 10;
-			edit_width = 10;
-		}
-		: button {
-			label = "Zmien"; 
-			key = "zmienNazwe";	
-			alignment = centered; 
-			width = 12;
-			is_default = true;
-		}
-	}
- 
 	: column {
  		: row {
  			: button {
@@ -29,7 +9,6 @@ dclAtrybutPozycjonowanie : dialog {
 				mnemonic = "O";
 				alignment = centered; 
 				width = 12;
-				is_default = true;
 			}
  			: button {
 				label = "U-C"; 
@@ -37,7 +16,6 @@ dclAtrybutPozycjonowanie : dialog {
 				mnemonic = "O";
 				alignment = centered; 
 				width = 12;
-				is_default = true;
 			}
  			: button {
 				label = "U-R"; 
@@ -45,7 +23,6 @@ dclAtrybutPozycjonowanie : dialog {
 				mnemonic = "O";
 				alignment = centered; 
 				width = 12;
-				is_default = true;
 			}
 		}
  
@@ -56,7 +33,6 @@ dclAtrybutPozycjonowanie : dialog {
 				mnemonic = "O";
 				alignment = centered; 
 				width = 12;
-				is_default = true;
 			}
  			: button {
 				label = "M-C"; 
@@ -64,7 +40,6 @@ dclAtrybutPozycjonowanie : dialog {
 				mnemonic = "O";
 				alignment = centered; 
 				width = 12;
-				is_default = true;
 			}
  			: button {
 				label = "M-R"; 
@@ -72,7 +47,6 @@ dclAtrybutPozycjonowanie : dialog {
 				mnemonic = "O";
 				alignment = centered; 
 				width = 12;
-				is_default = true;
 			}
 		}
  
@@ -83,7 +57,6 @@ dclAtrybutPozycjonowanie : dialog {
 				mnemonic = "O";
 				alignment = centered; 
 				width = 12;
-				is_default = true;
 			}
  			: button {
 				label = "D-C"; 
@@ -91,7 +64,6 @@ dclAtrybutPozycjonowanie : dialog {
 				mnemonic = "O";
 				alignment = centered; 
 				width = 12;
-				is_default = true;
 			}
  			: button {
 				label = "D-R"; 
@@ -99,7 +71,6 @@ dclAtrybutPozycjonowanie : dialog {
 				mnemonic = "O";
 				alignment = centered; 
 				width = 12;
-				is_default = true;
 			}
 		}
 		
@@ -110,7 +81,6 @@ dclAtrybutPozycjonowanie : dialog {
 				mnemonic = "O";
 				alignment = centered; 
 				width = 12;
-				is_default = true;
 			}
  			: button {
 				label = "Koniec"; 
@@ -118,7 +88,6 @@ dclAtrybutPozycjonowanie : dialog {
 				mnemonic = "O";
 				alignment = centered; 
 				width = 12;
-				is_default = true;
 			}
 		}
  

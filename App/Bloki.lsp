@@ -50,48 +50,25 @@
                        )
 )
 
-
-(setq LISTA_ELEMENTOW '(
-		"ESSER_12R" 
-		"ESSER_4G2R" 
-		"ESSER_FCT"
-		"ESSER_MCP" 
-		"ESSER_O" 
-		"ESSER_O2T" 
-		"ESSER_O2TW" 
-		"ESSER_OT" 
-		"ESSER_TAL"
-		"ESSER_TD"
-		"ESSER_Wireless" 
-		"ESSER_WZ" 
-	))
-
-
-(defun pl:CzyElement (nazwaBloku) 
-  (setq iIloscBlokow (length LISTA_ELEMENTOW))
-  (setq wynik nil)
-  (setq i 0)
-  (repeat iIloscBlokow 
-    (setq ttt (strcat (nth i LISTA_ELEMENTOW) ""))
-    (if (= ttt nazwaBloku) (setq wynik T))
-    (setq i (+ i 1))
-  )
-  wynik
+(setq LISTA_ELEMENTOW '("ESSER_12R" "ESSER_4G2R" "ESSER_FCT" "ESSER_MCP" "ESSER_O" 
+                         "ESSER_O2T" "ESSER_O2TW" "ESSER_OT" "ESSER_TAL" "ESSER_TD" 
+                         "ESSER_Wireless" "ESSER_WZ"
+                        )
 )
 
 
 (defun pl:BlokLista () 
-  (vl-load-com) 
+  (vl-load-com)
   (setq plik (getfiled "Select A Directory" "raport" "csv" 1))
   (setq file_desc (open plik "w"))
 
   (print file_desc)
-  
-  
+
+
   (setq ss1 (ssget "_X" '((0 . "INSERT"))))
   (setq l 0)
 
-  
+
   (repeat (sslength ss1) 
     (setq blokS (ssname ss1 l))
     (setq blokNazwa (cdr (assoc 2 (entget blokS))))
