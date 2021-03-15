@@ -4,6 +4,7 @@
 (setq PATH_SYSTEMY (strcat PATH_SKRYPT "Systemy\\"))
 
 ; includowanie
+(load (strcat PATH_SKRYPT "Konfiguracja.lsp"))
 (load (strcat PATH_SKRYPT "App\\Log.lsp"))
 (load (strcat PATH_SKRYPT "App\\AppSetup.lsp"))
 (load (strcat PATH_SKRYPT "App\\Warstwy.lsp"))
@@ -11,6 +12,7 @@
 (load (strcat PATH_SKRYPT "App\\Atrybuty.lsp"))
 (load (strcat PATH_SKRYPT "App\\SystemPozarowy.lsp"))
 (load (strcat PATH_SKRYPT "App\\PolaczCzujki.lsp"))
+(load (strcat PATH_SKRYPT "App\\Elementy.lsp"))
 
 ; zmienne globalne
 (setq LOG_SZEROKOSC 80)
