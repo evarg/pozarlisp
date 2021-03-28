@@ -45,18 +45,6 @@
 )
 
 
-(setq LISTA_ELEMENTOW '("EST3_271" "EST3_CC1" "EST3_CR" "EST3_CT1" "EST3_CT2" 
-                        "EST3_IB" "EST3_IO" "EST3_IZ" "EST3_PHS" "EST3_PS" "EST3_WZ"
-                       )
-)
-
-(setq LISTA_ELEMENTOW '("ESSER_12R" "ESSER_4G2R" "ESSER_FCT" "ESSER_MCP" "ESSER_O" 
-                         "ESSER_O2T" "ESSER_O2TW" "ESSER_OT" "ESSER_TAL" "ESSER_TD" 
-                         "ESSER_Wireless" "ESSER_WZ"
-                        )
-)
-
-
 (defun pl:BlokLista () 
   (vl-load-com)
   (setq plik (getfiled "Select A Directory" "raport" "csv" 1))
@@ -92,6 +80,7 @@
         )
         (write-line linia file_desc)
         ;(print file_desc)
+        (close file_desc)
       )
     )
 
