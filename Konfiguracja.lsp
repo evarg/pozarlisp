@@ -17,3 +17,17 @@
 
 (setq KONF_OdstepParowaniaPion -500)
 (setq KONF_OdstepParowaniaPoziom 500)
+
+; sciezka dostepu do blokow dla systemow
+(setq PATH_SYSTEMY "d:\\pozarlisp\\Systemy\\")
+
+; liczba dostepnych parametrow w atrybucie raw
+(setq KONF_RAW_ROZMIAR 4)
+(setq KONF_RAW_CENTRALA 0)
+(setq KONF_RAW_NR_NA_PETLI 1)
+(setq KONF_RAW_SERIAL 2)
+(setq KONF_RAW_UUID 3)
+
+; lista systemow
+(setq KONF_LISTA_ELEMENTOW '())
+(setq KONF_LISTA_ELEMENTOW_PETLOWYCH '())

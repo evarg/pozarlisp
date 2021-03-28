@@ -1,4 +1,42 @@
-(defun pl:ElementWyrownajPoziom (/ blokPodstawowy blokDoPodmiany bazaX bazaY blokX blokY ) 
+; format atrybutu raw dla: ELEMENT
+; 
+; centrala;numer_na_petli;numer_seryjny;uuid
+;
+
+; format atrybutu raw dla: SYSTEM_POZAROWY
+; 
+; typ;uuid
+;
+
+(defun pl:UsunSS (/ ActiveSel) 
+  (setq ActiveSel (cadr (ssgetfirst)))
+  (if ActiveSel 
+    (progn 
+      (command "_erase" ActiveSel "")
+    )
+    (print "Nic nie wybrano")
+  )
+  (setq ActiveSel nil)
+)
+
+(defun pl:WstawElement (nazwaSystemu nazwaElementu / nazwaPliku) 
+  (if (tblsearch "BLOCK" nazwaElementu) 
+    (progn 
+      (command "_insert" nazwaElementu "S" 1 "O" 0)
+    )
+    (progn 
+      (setq nazwaPliku (strcat PATH_SYSTEMY nazwaSystemu "\\" nazwaElementu ".dwg"))
+      (print (strcat "Wczytanie z dysku: " nazwaPliku))
+      (command "_insert" nazwaPliku "S" 1 "O" 0 "")
+      (print "koniec inster")
+    )
+  )
+)
+
+
+(defun pl:ElementWyrownajPoziom (/ blokPodstawowy blokDoPodmiany bazaX bazaY blokX 
+                                 blokY
+                                ) 
   (setq blokPodstawowy (car (entsel "Wybierz blok wzgledem ktorego ma byc pozycjonowanie" ) ))
   (setq bazaX (car (pl:BlokPozycjaGet blokPodstawowy)))
   (setq bazaY (cadr (pl:BlokPozycjaGet blokPodstawowy)))
@@ -16,9 +54,9 @@
     (setvar "OSMODE" osval)
   )
 )
-
-
-(defun pl:ElementWyrownajPion (/ blokPodstawowy blokDoPodmiany bazaX bazaY blokX blokY ) 
+(defun pl:ElementWyrownajPion (/ blokPodstawowy blokDoPodmiany bazaX bazaY blokX 
+                               blokY
+                              ) 
   (setq blokPodstawowy (car (entsel "Wybierz blok wzgledem ktorego ma byc pozycjonowanie" ) ))
   (setq bazaX (car (pl:BlokPozycjaGet blokPodstawowy)))
   (setq bazaY (cadr (pl:BlokPozycjaGet blokPodstawowy)))
@@ -40,8 +78,6 @@
     (setvar "OSMODE" osval)
   )
 )
-
-
 (defun pl:ElementParujPionM (/ ActiveSel) 
   (setq ActiveSel (cadr (ssgetfirst)))
   (if (and ActiveSel (= (sslength ActiveSel) 2)) 
@@ -67,8 +103,6 @@
     (print "Nic nie wybrano albo wybrano za zle")
   )
 )
-
-
 (defun pl:ElementParujPoziomM (/ ActiveSel) 
   (setq ActiveSel (cadr (ssgetfirst)))
   (if (and ActiveSel (= (sslength ActiveSel) 2)) 
@@ -94,8 +128,6 @@
     (print "Nic nie wybrano albo wybrano za zle")
   )
 )
-
-
 (defun pl:ElementWidocznoscAtrybutu (nazwaAtrybutu stan) 
   (setq ss1 (ssget "_X" '((0 . "INSERT"))))
   (setq l 0)
@@ -112,8 +144,6 @@
     (setq l (+ l 1))
   )
 )
-
-
 (defun pl:CzyElement (nazwaBloku) 
   (setq iIloscBlokow (length LISTA_ELEMENTOW))
   (setq wynik nil)
